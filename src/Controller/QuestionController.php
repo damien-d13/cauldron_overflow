@@ -10,19 +10,19 @@ class QuestionController extends AbstractController
 {
 
     /**
-     * @Route("/")
+     * @Route("/", name="app_homepage")
      */
     public function homepage()
     {
-        return new Response('what a bewitching controller we have conjured !');
+        return $this->render('question/homepage.html.twig');
     }
 
     /**
-     * @Route("/question/{slug}")
+     * @Route("/question/{slug}", name="app_question_show")
      */
     public function show($slug)
     {
-
+        
         $answers = [
             'Make sure your cat is sitting purrfectly still',
             'honestly, i like furry shoes better than my cat',
