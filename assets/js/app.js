@@ -1,6 +1,10 @@
 /**
- * Simple (ugly) code to handle the comment vote up/down
+ * require css for webpack
  */
+require('../css/app.css');
+
+import $ from 'jquery';
+
 var $container = $('.js-vote-arrows');
 $container.find('a').on('click', function(e) {
     e.preventDefault();
